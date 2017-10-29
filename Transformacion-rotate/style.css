@@ -1,0 +1,23 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #9c2da8;
+  font-family: 'Indie Flower', cursive;
+}
+.container{
+  border: 1px solid #512E62;
+}
+
+.container:hover .cuadrado{
+  /*transform: rotateX(45deg) rotateY(45deg) rotateZ(45deg);*/
+  transform: rotate3d(0, 2, 0, 45deg);
+}
+.cuadrado{
+  width: 200px;
+  height: 200px;
+  /*background: #9C2DA8;*/
+  margin: 20px;
+  transition: .3s;
+}

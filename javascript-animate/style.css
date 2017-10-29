@@ -1,0 +1,34 @@
+body{
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  width: 600px;
+  border: 1px solid #FE1980;
+}
+.pelota{
+  width: 100px;
+  height: 100px;
+  background: #FCBFD5;
+  border-radius: 50%;
+}
+.btn{
+  
+  text-align: center;
+  background:#DA005B;
+  padding: .6em .8em .8em;
+  border: none;
+  color: white;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: inset 0 -.2em rgba(0,0,0, .2);
+  outline: 0;
+  transition: .2s;
+  will-change: transform;
+}
+.btn:active{
+  transform: scale(.9);
+}
