@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Invie from './App';
+import Invie from './Invie';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(<Invie />, document.getElementById('root'));
