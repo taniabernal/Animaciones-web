@@ -7,7 +7,7 @@ class Footer extends Component {
       <footer className="footer">
           <div className="contenedor">
             <div className="contacto">
-              <img data-src={logoWhite} alt="logotipo blanco" />
+              <img src={logoWhite} alt="logotipo blanco" />
               <a href="tel:570214461215"><strong>Telefono</strong><span>3215487568</span></a>
               <a href="mailto:contacto@invie.com"><strong>E-mail</strong><span>contacto@invie.com</span></a>
             </div>

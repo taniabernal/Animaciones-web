@@ -27,7 +27,7 @@
 .icon-phone:before {
   content: "\e942";
 }
-.icon-menu:before {
+.icon-menu:before {/*animation: animationOut .8s forwards;*/
   content: "\e9bf";
 }
 .icon-close:before {
@@ -36,7 +36,6 @@
 .icon-mail:before {
   content: "\ea84";
 }
-
 
 .body{
 font-family: 'Allerta', sans-serif;
@@ -81,9 +80,39 @@ table, td, th{
     position:relative;
 }
 .background{
-    background-color: #466173;
+
     background-image: url("../images/background.png");
     background-size: cover;
+}
+
+.portada.background.is-animated{
+  background-image: url("../images/team-platzi-azul.jpg");
+  background-repeat: no-repeat;
+  animation: background 15s linear infinite alternate;
+}
+
+@keyframes background {
+  0%{
+    background-size: 200%;
+    background-position: center;
+  }
+  20%{
+    background-position: right top;
+  }
+  40%{
+    background-position: center;
+    background-size: 100%;
+  }
+  60%{
+    background-position: left top;
+  }
+  80%{
+    background-position:left -100px; 
+  }
+  100%{
+    background-position: right -100px;
+    background-size: 200%;
+  }
 }
 
 .button{
@@ -175,32 +204,70 @@ table, td, th{
 
 
 .guitarra{
-  margin: 10px 10px 40px 10px;
-  padding: 10px;
+  margin: 10px 0 40px;
+  padding: 10px 2em;
   /*overflow: hidden;*/
   border: 1px solid #1f313c;
   border-radius: 8px;
 
+  display: flex;
+  align-items: center;
+  min-height: 250px;
+  transition: .3s;
+  position: relative;
+}
+.guitarra:hover{
+  /*box-shadow: x y % color;*/
+  box-shadow: 10px 10px 0 #C0F205;
+}
+.guitarra-name{
+  font-size: 3em;
+  margin: 0 0 .2em;
+  padding-bottom: .2em;
+  border-bottom: 2px dashed #1e313d;
+}
+.guitarra:nth-of-type(even):hover{
+  box-shadow: -10px 10px 0 #DB3DA3;
+}
+.guitarra:nth-of-type(even){
+  /*background: green;*/
+  justify-content: flex-end;
+}
+
+.guitarra:nth-of-type(even) .guitarra-image {
+  left:0;
+  right: initial;
+}
+.guitarra-image{
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 .guitarra ol{
   padding: 0;
+  list-style: none;
+  counter-reset: features;
+}
+.guitarra li:before{
+  counter-increment: features;
+  content: counter(features) ". ";
 }
 
-.guitarra.b{
+/*.guitarra.b{
   height: 300px;
-}
-
+}*/
+/*
 .right{
-  /*float: right;
-  position: relative;*/
+  float: right;
+  position: relative;
   top: -141px;
 }
 
 .left{
-  /*float: left;
-  position: relative;*/
+  float: left;
+  position: relative;
 
-}
+}*/
 
 .contenedor-guitarra-a{
   padding-left: 20px;
